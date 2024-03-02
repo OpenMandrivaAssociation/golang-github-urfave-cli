@@ -1,2 +1,3 @@
 sources:
-  cli-1.20.0.tar.gz: 53e9db9b8db0b8fd84eceec55fb7ec28a701a757
+  vendor.tar.zst: e257a19326712693c87e86fc4dc8d9389bdaced7
+  cli-1.22.10.tar.gz: f4a43bddac605605745459fdf4b4e3710268ddf5
