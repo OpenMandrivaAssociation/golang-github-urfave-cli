@@ -3,12 +3,13 @@
 %global debug_package %{nil}
 
 # Run tests in check section
-%bcond_without check
+# We currently don't package all dependencies of the tests
+%bcond_with check
 
 # https://github.com/urfave/cli
 %global goipath		github.com/urfave/cli
 %global forgeurl	https://github.com/urfave/cli
-Version:			1.22.10
+Version:			2.27.4
 
 %gometa
 
@@ -77,11 +78,5 @@ export GO111MODULE=off
 
 %check
 %if %{with check}
-for test in "TestApp_RunAsSubCommandIncorrectUsage" \
-            "TestToMan" \
-; do
-awk -i inplace '/^func.*'"$test"'\(/ { print; print "\tt.Skip(\"disabled failing test\")"; next}1' $(grep -rl $test)
-done
 %gochecks
 %endif
-
