@@ -9,7 +9,7 @@
 # https://github.com/urfave/cli
 %global goipath		github.com/urfave/cli
 %global forgeurl	https://github.com/urfave/cli
-Version:			2.27.4
+Version:			2.27.5
 
 %gometa
 
